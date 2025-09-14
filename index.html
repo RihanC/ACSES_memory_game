@@ -1,0 +1,24 @@
+<!-- Firebase Config -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAewGS_igoEaRrBK9E1f_LqwXMMOSsHdqc",
+    authDomain: "acses-card-game.firebaseapp.com",
+    projectId: "acses-card-game",
+    storageBucket: "acses-card-game.firebasestorage.app",
+    messagingSenderId: "983847591091",
+    appId: "1:983847591091:web:ea5999325a18ef9f5d64c6",
+    measurementId: "G-KL8FGSSFGC"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  getAnalytics(app);
+  const db = getFirestore(app);
+
+  // ✅ Make Firestore accessible in script.js
+  window.db = db;
+</script>
+<script type="module" src="script.js"></script>
